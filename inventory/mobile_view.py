@@ -34,10 +34,12 @@ class WithDrawStock(APIView):
             withdraw_person=data['withdrawee_id']
             itemList=data['items']
             Outgoing_stock_log().withdraw_stocks(stocks=itemList,withdrawn_person=withdraw_person)
-            return HttpResponse("success")
-
-
             out={"result":"success"}
+
+            return HttpResponse(json.loads(out))
+
+
+            out={"result":"fail"}
         return HttpResponse(json.loads(out))
 
 
