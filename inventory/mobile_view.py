@@ -36,11 +36,11 @@ class WithDrawStock(APIView):
             Outgoing_stock_log().withdraw_stocks(stocks=itemList,withdrawn_person=withdraw_person)
             out={"result":"success"}
 
-            return HttpResponse(json.loads(out))
+            return HttpResponse(json.dumps(out))
 
 
             out={"result":"fail"}
-        return HttpResponse(json.loads(out))
+        return HttpResponse(json.dumps(out))
 
 
 class PeopleView(generics.ListCreateAPIView):
