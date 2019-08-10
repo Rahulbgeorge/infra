@@ -19,10 +19,10 @@ from django.contrib import admin
 from .views import BillView, Stocks, StockData, Products, newstock, newBillEntry, newItemEntry, \
     displayAllItems,Withdraw_history, bill_page, SingleBill, qrCode,homepage ,inventory_log
 from .mobile_view import WithDrawStock, PeopleView, PersonView
-from rest_framework.documentation import include_docs_urls
+# from rest_framework.documentation import include_docs_urls
 
 urlpatterns = [
-    url(r'^docs/', include_docs_urls(title='My API title')),
+    # url(r'^docs/', include_docs_urls(title='My API title')),
     url("^newBill/$", newBillEntry),
     url("^newItemEntry/$", newItemEntry),
     url("^displayAllItems/$", displayAllItems),
