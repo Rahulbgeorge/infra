@@ -37,8 +37,8 @@ class WithDrawStock(APIView):
             return HttpResponse("success")
 
 
-
-        return HttpResponse("Data responded")
+            out={"result":"success"}
+        return HttpResponse(json.loads(out))
 
 
 class PeopleView(generics.ListCreateAPIView):
